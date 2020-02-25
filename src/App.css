@@ -1,38 +1,69 @@
-.App {
-  text-align: center;
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.movie-card,
+.new-movie-card {
+  border: 2px solid black;
+  width: 200px;
+  height: 250px;
+  position: relative;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.new-movie-card {
+  font-size: 4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.movie-image {
+  background-image: url(https://www.mearto.com/assets/no-image-83a2b680abc7af87cfff7777d0756fadb9f9aecd5ebda5d34f8139668e0fc842.png);
+  height: 90%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.movie-rating {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px 10px;
+  border: 2px solid black;
+  border-top: none;
+  border-right: none;
+}
+.rating-filter {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 10px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.rating-filter:hover {
+  cursor: pointer;
+}
+.rating-filter-text {
+  font-size: 0.8em;
+}
+.name-filter {
+  height: 50px;
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  padding: 10px 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.image {
+  width: 280px;
+  height: 300px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.name-filter-text {
+  flex: 1;
+  border: 2px solid black;
+}
+.form {
+  display: flex;
+  flex-direction: column;
 }
