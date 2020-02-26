@@ -1,7 +1,8 @@
 import React from "react";
 import MovieCard from "./MovieCard";
+import WithLoading from "./WithLoading";
 
-export default function MovieList(props) {
+function MovieList(props) {
   return (
     <div className="movie-list">
       {props.movieList.map(el => (
@@ -10,3 +11,5 @@ export default function MovieList(props) {
     </div>
   );
 }
+
+export default WithLoading(MovieList);
